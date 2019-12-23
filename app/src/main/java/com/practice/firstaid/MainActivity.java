@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
         dialog.show(getSupportFragmentManager(), "CallToAmbulanceDialog");
     }
 
-    private boolean loadFragment(Fragment fragment) {
+    public boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
             getSupportFragmentManager()
                     .beginTransaction()
