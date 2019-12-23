@@ -4,4 +4,50 @@
     android:layout_height="match_parent">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:text="@string/test_header"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/first_aid_image_for_test"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:text="@string/test_message"/>
+
+            <Button
+                android:id="@+id/test"
+                android:layout_marginTop="7dp"
+                android:layout_width="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="match_parent"
+                android:background="@drawable/button_selector"
+                android:padding="10dp"
+                android:text="@string/start_test"
+                android:drawableLeft="@drawable/ic_tests_24dp"
+                />
+        </LinearLayout>
+
+    </ScrollView>
 </RelativeLayout>
