@@ -1,11 +1,12 @@
 package com.practice.firstaid;
 
-
 import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,18 +18,20 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Fragment fragment = null;
+
             switch (item.getItemId()) {
                 case R.id.navigation_first_aid:
-
-                    return true;
+                    fragment = new FirstAidFragment();
+                    break;
                 case R.id.navigation_tests:
-
-                    return true;
+                    fragment = new TestsFragment();
+                    break;
                 case R.id.navigation_manual:
-
-                    return true;
+                    fragment = new ManualFragment();
+                    break;
             }
-            return false;
+            return loadFragment(fragment);
         }
     };
 
@@ -36,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        loadFragment(new FirstAidFragment());
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -61,6 +67,17 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
     public void callToAmbulance() {
         DialogFragment dialog = new CallToAmbulanceDialog();
         dialog.show(getSupportFragmentManager(), "CallToAmbulanceDialog");
+    }
+
+    private boolean loadFragment(Fragment fragment) {
+        if (fragment != null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace( R.id.fragment_container,  fragment)
+                    .commit();
+            return true;
+        }
+        return false;
     }
 
 }
