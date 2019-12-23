@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Первая помощь</string>
+    <string name="title_first_aid">Первая помощь</string>
+    <string name="title_tests">Проверь себя</string>
+    <string name="title_manual">Справочник</string>
+    <string name="sos_call">Вызвать скорую</string>
+    <string name="call_to_ambulance_dialog_title">Вызвать скорую помощь?</string>
+    <string name="call_to_ambulance_dialog_negative_btn">Отмена</string>
+    <string name="call_to_ambulance_dialog_positive_btn">Вызвать</string>
+    <string name="call_to_ambulance_dialog_message">Звонок будет произведен на общий номер экстренных служб 112. Вызов совершится даже при отсутствии связи, SIM-карты или денег на счету.</string>
+</resources>
