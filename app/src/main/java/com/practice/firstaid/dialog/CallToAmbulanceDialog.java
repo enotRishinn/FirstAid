@@ -1,4 +1,4 @@
-package com.practice.firstaid;
+package com.practice.firstaid.dialog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import androidx.fragment.app.DialogFragment;
+
+import com.practice.firstaid.R;
 
 public class CallToAmbulanceDialog extends DialogFragment {
 

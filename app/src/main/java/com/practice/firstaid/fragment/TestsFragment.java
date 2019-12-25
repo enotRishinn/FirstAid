@@ -1,4 +1,4 @@
-package com.practice.firstaid;
+package com.practice.firstaid.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.practice.firstaid.activity.MainActivity;
+import com.practice.firstaid.R;
 
 public class TestsFragment extends Fragment implements View.OnClickListener  {
     @Nullable

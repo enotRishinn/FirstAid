@@ -11,4 +11,6 @@
     <string name="start_test">Начать тест</string>
     <string name="test_header">Тест на тему  «Оказание первой медицинской помощи»</string>
     <string name="test_message">Проверьте свои знания и пройдите тест. Тест состоит из 40 вопросов. Вы можете завершить тест в любой момент или пропустить вопрос, если не знаете ответ.</string>
+    <string name="finish_test">Закончить тест</string>
+    <string name="skip_question">Пропустить вопрос</string>
 </resources>

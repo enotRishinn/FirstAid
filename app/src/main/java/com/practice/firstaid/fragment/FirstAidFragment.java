@@ -1,4 +1,4 @@
-package com.practice.firstaid;
+package com.practice.firstaid.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.practice.firstaid.R;
 
 public class FirstAidFragment extends Fragment {
     @Nullable
