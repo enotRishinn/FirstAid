@@ -1,5 +1,6 @@
 package com.practice.firstaid.fragment;
 
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.practice.firstaid.R;
@@ -144,6 +146,22 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 }
                 if((number+1) == 6) {
                     ((MainActivity)getActivity()).loadFragment(new TestsFragment());
+                    android.app.AlertDialog.Builder builder_end = new android.app.AlertDialog.Builder(getActivity());
+                    LayoutInflater inflater_end = getActivity().getLayoutInflater();
+                    final View v_end = inflater_end.inflate(R.layout.result_dialog, null);
+                    builder_end.setView(v_end)
+                            .setNegativeButton("Завершить просмотр",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                        }
+                                    });
+                    final android.app.AlertDialog dialog_end = builder_end.create();
+                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+
+                    dialog_end.show();
                 } else {
                     (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.INVISIBLE);
                     (view.getRootView()).findViewById(R.id.first_answer).setClickable(true);
@@ -169,6 +187,24 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.finish:
                 ((MainActivity)getActivity()).loadFragment(new TestsFragment());
+
+                android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(getActivity());
+                LayoutInflater inflater = getActivity().getLayoutInflater();
+                final View v = inflater.inflate(R.layout.result_dialog, null);
+
+                builder.setView(v)
+                        .setNegativeButton("Завершить просмотр",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                final android.app.AlertDialog dialog = builder.create();
+                ((TextView)v.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
+                ((TextView)v.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
+                ((TextView)v.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+
+                dialog.show();
                 break;
             case R.id.skip:
                 number++;
@@ -178,6 +214,22 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 }
                 if((number+1) == 6) {
                     ((MainActivity)getActivity()).loadFragment(new TestsFragment());
+                    android.app.AlertDialog.Builder builder_end = new android.app.AlertDialog.Builder(getActivity());
+                    LayoutInflater inflater_end = getActivity().getLayoutInflater();
+                    final View v_end = inflater_end.inflate(R.layout.result_dialog, null);
+                    builder_end.setView(v_end)
+                            .setNegativeButton("Завершить просмотр",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                        }
+                                    });
+                    final android.app.AlertDialog dialog_end = builder_end.create();
+                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+
+                    dialog_end.show();
                 } else {
                     (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.INVISIBLE);
                     (view.getRootView()).findViewById(R.id.first_answer).setClickable(true);
