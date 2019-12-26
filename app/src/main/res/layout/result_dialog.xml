@@ -22,44 +22,61 @@
             android:text="@string/test_result"
             android:textSize="22sp"/>
 
-        <ImageView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:src="@drawable/test_result"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="2dp">
 
-        <TextView
-            android:id="@+id/number_of_correct_answer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_selector_correct"
-            android:textColor="@android:color/primary_text_light"
-            android:textAllCaps="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/number_of_skip_answer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/button_selector"
-            android:layout_marginLeft="20dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="20dp"
-            android:textColor="@android:color/primary_text_light"
-            android:textAllCaps="true"
-            android:textSize="20sp"/>
-        <TextView
-            android:id="@+id/number_of_wrong_answer"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/button_selector_error"
-            android:textColor="@android:color/primary_text_light"
-            android:textAllCaps="true"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:textSize="20sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:paddingRight="10dp"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/number_of_correct_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/button_selector_correct"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+                <TextView
+                    android:id="@+id/number_of_skip_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textAllCaps="true"/>
+                <TextView
+                    android:id="@+id/number_of_wrong_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_selector_error"
+                    android:textColor="@android:color/primary_text_light"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="20dp"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="155dp"
+                android:layout_height="189dp"
+                android:src="@drawable/for_test_result"
+                />
+
+        </LinearLayout>
+
+
         </LinearLayout>
 
     </ScrollView>

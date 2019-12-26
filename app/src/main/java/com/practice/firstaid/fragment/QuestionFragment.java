@@ -157,9 +157,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                                         }
                                     });
                     final android.app.AlertDialog dialog_end = builder_end.create();
-                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
-                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
-                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильно: " + number_of_correct_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущено: " + number_of_skip_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильно: " + number_of_wrong_answers);
 
                     dialog_end.show();
                 } else {
@@ -200,9 +200,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                                     }
                                 });
                 final android.app.AlertDialog dialog = builder.create();
-                ((TextView)v.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
-                ((TextView)v.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
-                ((TextView)v.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+                ((TextView)v.findViewById(R.id.number_of_correct_answer)).setText("Правильно: " + number_of_correct_answers);
+                ((TextView)v.findViewById(R.id.number_of_skip_answer)).setText("Пропущено: " + number_of_skip_answers);
+                ((TextView)v.findViewById(R.id.number_of_wrong_answer)).setText("Неправильно: " + number_of_wrong_answers);
 
                 dialog.show();
                 break;
@@ -225,9 +225,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                                         }
                                     });
                     final android.app.AlertDialog dialog_end = builder_end.create();
-                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильные ответы: " + number_of_correct_answers);
-                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущенные ответы: " + number_of_skip_answers);
-                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильные ответы: " + number_of_wrong_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_correct_answer)).setText("Правильно: " + number_of_correct_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_skip_answer)).setText("Пропущено: " + number_of_skip_answers);
+                    ((TextView)v_end.findViewById(R.id.number_of_wrong_answer)).setText("Неправильно: " + number_of_wrong_answers);
 
                     dialog_end.show();
                 } else {

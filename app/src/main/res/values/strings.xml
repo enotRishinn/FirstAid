@@ -14,4 +14,8 @@
     <string name="finish_test">Закончить тест</string>
     <string name="skip_question">Пропустить вопрос</string>
     <string name="test_result">Результаты теста</string>
+    <string name="i_know_what_happen">Я знаю, что случилось, но не знаю, как оказать первую помощь</string>
+    <string name="i_dont_know_what_happen">Я не знаю, что случилось, и не знаю, как оказать первую помощь</string>
+    <string name="how_to_call_doctors">Как вызвать скорую помощь?</string>
+    <string name="heart_ritm">Таймер для измерения пульса</string>
 </resources>
