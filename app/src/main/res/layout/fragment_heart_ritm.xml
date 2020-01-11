@@ -1,6 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="23sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:text="Вы можете выбрать таймер на 10 секунд, который автоматически рассчитает частоту пульса за минуту от введенного количества ударов пульса за 10 секунд. Или таймер на 60 секунд, если вы хотите измерить частоту пульса в минуту сами."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginTop="2dp">
+
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="148dp"
+                    android:paddingLeft="30dp"
+                    android:src="@drawable/timer" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:paddingLeft="50dp"
+                    android:layout_marginTop="2dp">
+
+                    <Button
+                        android:id="@+id/timer_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Таймер на 10 секунд"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_selector"/>
+
+                    <Button
+                        android:id="@+id/timer_60"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="Таймер на 60 секунд"
+                        android:background="@drawable/button_selector"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_timer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <Button
+                android:id="@+id/start"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Начать"
+                android:layout_gravity="center"
+                android:background="@drawable/button_selector"/>
+
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:textSize="22sp"
+                android:text="Время: "
+                android:textColor="@android:color/black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:text="Введите подсчитанное количество ударов пульса за выбранное время:"/>
+
+            <EditText
+                android:id="@+id/ritm_in_time"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="match_parent"
+                android:hint="Количество ударов пульса"
+                android:inputType="numberSigned" />
+
+            <Button
+                android:id="@+id/calculate"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Рассчитать"
+                android:layout_gravity="center"
+                android:background="@drawable/button_selector"/>
+
+            <TextView
+                android:id="@+id/calculated_ritm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="30sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp" />
+
+
+
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
