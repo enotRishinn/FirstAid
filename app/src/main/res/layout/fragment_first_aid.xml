@@ -27,6 +27,7 @@
                 android:layout_width="match_parent"
                 android:background="@drawable/button_selector"
                 android:text="@string/i_know_what_happen"
+                android:textSize="17sp"
                 />
 
             <Button
@@ -38,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:background="@drawable/button_selector"
                 android:text="@string/i_dont_know_what_happen"
+                android:textSize="17sp"
                 />
 
             <View
@@ -67,6 +69,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_selector"
                 android:text="@string/how_to_call_doctors"
+                android:textSize="17sp"
                 android:textAllCaps="false" />
 
 
@@ -103,6 +106,7 @@
                     android:layout_marginTop="7dp"
                     android:background="@drawable/button_selector"
                     android:text="@string/heart_ritm"
+                    android:textSize="17sp"
                     android:textAllCaps="false" />
 
                     <Button
@@ -111,7 +115,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
                         android:background="@drawable/button_selector"
-                        android:text="Метроном для искусственной вентиляции легких"
+                        android:textSize="17sp"
+                        android:text="@string/metronom"
                         android:textAllCaps="false" />
 
                 </LinearLayout>

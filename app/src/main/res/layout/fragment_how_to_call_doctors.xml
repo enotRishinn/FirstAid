@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:orientation="vertical"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="23sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp"
+                android:text="Вызывать скорую помощь можно по телефону путем набора номеров 03, 103, 112 или номеров телефонов медицинской организации, оказывающей скорую медицинскую помощь."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <Button
+                android:id="@+id/call_doctors"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_selector"
+                android:padding="10dp"
+                android:text="Вызвать скорую помощь" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:text="Как эффективно вызвать скорую помощь?"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:text="1. Убедитесь, что состояние пациента является поводом для вызова скорой помощи, позвоните по одному из вышеуказанных номеров. \n\n2. Вам ответит диспетчер, который будет задавать короткие и ясные вопросы, на которые нужно быстро, четко и ясно ответить.\n\n3. Коротко опишите симптомы, четко назовите фамилию, имя, отчество и возраст пациента, адрес, по которому нужно приехать и телефон, по которому, в случае чего, сможет перезвонить бригада."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:text="Пока бригада скорой помощи находится в пути, нужно приготовить:"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:text="1. Паспорт\n\n2. Полис\n\n3. Все последние медицинские документы, которые могут понадобиться врачу: ЭКГ, протоколы осмотров других врачей, препараты, которые постоянно принимает или принял недавно пациент.\n\n4. Можно приготовить 2 пары бахил, но принуждать врачей надеть их Вы не имеете права.\n\n5. Стул и стол для доктора рядом с пациентом.\n\n6. Если Вы понимаете, что возможна госпитализация, то можете начать собирать пакет с необходимыми вещами (чашка, кружка, ложка, полотенце, тапочки, халат, белье, туалетная бумага, салфетки, телефон, зарядка для телефона)"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:text="По прибытии скорой помощи:"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:text="1. Встретить бригаду, убедиться, что домофон работает, и врачи смогут войти в подъезд.\n\n2. Убрать домашних животных (например, закрыть в одной из комнат).\n\n3. Лишние родственники и дети у постели больного тоже не нужны. Лучше один родственник, который располагает максимальной информацией о том, что случилось и может помочь врачу."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="40dp"
+                android:text="Если пациента нужно выносить на носилках, то может потребоваться помощь соседей и родственников. В машину скорой помощи для сопровождения пациента можно взять только одного родственника, который будет помогать врачу. "/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -35,6 +35,7 @@ import com.mongodb.stitch.core.services.mongodb.remote.RemoteUpdateOptions;
 import com.mongodb.stitch.core.services.mongodb.remote.RemoteUpdateResult;
 import com.practice.firstaid.R;
 import com.practice.firstaid.dialog.CallToAmbulanceDialog;
+import com.practice.firstaid.fragment.AlgorithmFragment;
 import com.practice.firstaid.fragment.FirstAidFragment;
 import com.practice.firstaid.fragment.ManualFragment;
 import com.practice.firstaid.fragment.TestsFragment;
@@ -45,30 +46,30 @@ import org.bson.Document;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements CallToAmbulanceDialog.CallToAmbulanceDialogListener {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+            = item -> {
+                Fragment fragment = null;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment = null;
-
-            switch (item.getItemId()) {
-                case R.id.navigation_first_aid:
-                    fragment = new FirstAidFragment();
-                    break;
-                case R.id.navigation_tests:
-                    fragment = new TestsFragment();
-                    break;
-                case R.id.navigation_manual:
-                    fragment = new ManualFragment();
-                    break;
-            }
-            return loadFragment(fragment);
-        }
-    };
+                switch (item.getItemId()) {
+                    case R.id.dont_know_what_happen:
+                        fragment = new AlgorithmFragment();
+                        break;
+                    case R.id.navigation_first_aid:
+                        fragment = new FirstAidFragment();
+                        break;
+                    case R.id.navigation_tests:
+                        fragment = new TestsFragment();
+                        break;
+                    case R.id.navigation_manual:
+                        fragment = new ManualFragment();
+                        break;
+                }
+                return loadFragment(fragment);
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,7 +81,6 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
     }
 
     @Override
@@ -118,3 +118,4 @@ public class MainActivity extends AppCompatActivity implements CallToAmbulanceDi
     }
 
 }
+

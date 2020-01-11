@@ -10,22 +10,22 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.practice.firstaid.R;
 import com.practice.firstaid.activity.MainActivity;
-import com.practice.firstaid.model.Answer;
-import com.practice.firstaid.model.Question;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
-public class QuestionFragment extends Fragment implements View.OnClickListener {
+import com.practice.firstaid.data.test_data.Answer;
+import com.practice.firstaid.data.test_data.Question;
+import com.practice.firstaid.data.test_data.QuestionsForTest;
 
+
+public class QuestionFragment extends Fragment implements View.OnClickListener {
     Question this_question;
-    ArrayList<Question> questions = new ArrayList<Question>();
+    QuestionsForTest questionsForTest = new QuestionsForTest();
     ArrayList<Answer> answers = new ArrayList<Answer>();
     int number = 0;
     int number_of_correct_answers = 0;
@@ -54,20 +54,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         finish.setOnClickListener(this);
         next_question.setOnClickListener(this);
 
-        Question question1 = new Question(1, "Каким образом проводится сердечно-легочная реанимация пострадавшего?", new Answer("Давление руками на грудину пострадавшего и искусственная вентиляция легких: вначале 30 надавливаний на грудину, затем 2 вдоха методом «Рот ко рту».", true), new Answer("Искусственная вентиляция легких и давление руками на грудину пострадавшего: вначале 1 вдох методом «Рот ко рту», затем 15 надавливаний на грудину.", false), new Answer("Давление руками на грудину пострадавшего и искусственная вентиляция легких: вначале 5 надавливаний на грудину, затем 1 вдох методом «Рот ко рту».", false));
-        Question question2 = new Question(2, "Что из перечисленного является признаком венозного кровотечения?", new Answer("Очень темный цвет крови.", true), new Answer("Алая кровь из раны вытекает фонтанирующей струей.", false), new Answer("Кровь пассивно стекает из раны.", false));
-        Question question9 = new Question(9, "В какой последовательности следует осматривать ребенка при его травмировании?", new Answer("Голова, шея, грудная клетка, живот и область таза, конечности.", true), new Answer("Конечности, область таза и живот, грудная клетка, шея, голова.", false), new Answer("Грудная клетка, живот и область таза, голова, шея, конечности.", false));
-        Question question12 = new Question(12, "Как проверить наличие дыхания у ребенка при внезапной потере сознания?", new Answer("Запрокинуть голову ребенка, поднять подбородок, в течение 10 секунд прислушиваться, пытаться ощутить дыхание ребенка на своей щеке, увидеть дыхательные движения его грудной клетки.", true), new Answer("Наклониться к ребенку, приложить ухо к его грудной клетке и в течение 10 секунд прислушиваться.", false), new Answer("В течение 10 секунд внимательно смотреть на его грудную клетку.", false));
-        Question question16 = new Question(16, "Первая медицинская помощь при вывихе конечности?", new Answer("Осуществить иммобилизацию конечности, дать доступные обезболивающие средства, приложить к поврежденному суставу пузырь с холодной водой или льдом, организовать транспортировку в больницу или травмпункт.", true), new Answer("Дать обезболивающее средство, вправить вывих и зафиксировать конечность.", false), new Answer("Зафиксировать конечность, не вправляя вывих, приложить пузырь (грелку) с горячей водой, организовать транспортировку в больницу или травмпункт.", false));
+        Collections.shuffle(questionsForTest.questions);
 
-        questions.add(question1);
-        questions.add(question2);
-        questions.add(question9);
-        questions.add(question12);
-        questions.add(question16);
-        Collections.shuffle(questions);
-
-        this_question = questions.get(0);
+        this_question = questionsForTest.questions.get(0);
         number_of_question.setText("Вопрос №1");
         question.setText(this_question.getQuestion());
         answers.clear();
@@ -87,6 +76,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.first_answer:
                 (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.VISIBLE);
+                (view.getRootView()).findViewById(R.id.finish).setVisibility(View.GONE);
+                (view.getRootView()).findViewById(R.id.skip).setVisibility(View.GONE);
+                (view.getRootView()).findViewById(R.id.first_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.second_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.third_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.skip).setClickable(false);
@@ -105,7 +97,10 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.second_answer:
                 (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.VISIBLE);
+                (view.getRootView()).findViewById(R.id.finish).setVisibility(View.GONE);
+                (view.getRootView()).findViewById(R.id.skip).setVisibility(View.GONE);
                 (view.getRootView()).findViewById(R.id.first_answer).setClickable(false);
+                (view.getRootView()).findViewById(R.id.second_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.third_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.skip).setClickable(false);
                 if (answers.get(1).getCorrect()) {
@@ -123,8 +118,11 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.third_answer:
                 (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.VISIBLE);
-                (view.getRootView()).findViewById(R.id.second_answer).setClickable(false);
+                (view.getRootView()).findViewById(R.id.finish).setVisibility(View.GONE);
+                (view.getRootView()).findViewById(R.id.skip).setVisibility(View.GONE);
                 (view.getRootView()).findViewById(R.id.first_answer).setClickable(false);
+                (view.getRootView()).findViewById(R.id.second_answer).setClickable(false);
+                (view.getRootView()).findViewById(R.id.third_answer).setClickable(false);
                 (view.getRootView()).findViewById(R.id.skip).setClickable(false);
                 if (answers.get(2).getCorrect()) {
                     number_of_correct_answers++;
@@ -141,10 +139,12 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.next_question:
                 number++;
-                if((number+1) == 5) {
+                if((number+1) == 40) {
                     ((Button)(view.getRootView().findViewById(R.id.next_question))).setText("Завершить тест");
+                    (view.getRootView()).findViewById(R.id.finish).setVisibility(View.VISIBLE);
+                    (view.getRootView()).findViewById(R.id.skip).setVisibility(View.VISIBLE);
                 }
-                if((number+1) == 6) {
+                if((number+1) == 41) {
                     ((MainActivity)getActivity()).loadFragment(new TestsFragment());
                     android.app.AlertDialog.Builder builder_end = new android.app.AlertDialog.Builder(getActivity());
                     LayoutInflater inflater_end = getActivity().getLayoutInflater();
@@ -163,7 +163,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
 
                     dialog_end.show();
                 } else {
-                    (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.INVISIBLE);
+                    (view.getRootView()).findViewById(R.id.finish).setVisibility(View.VISIBLE);
+                    (view.getRootView()).findViewById(R.id.skip).setVisibility(View.VISIBLE);
+                    (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.GONE);
                     (view.getRootView()).findViewById(R.id.first_answer).setClickable(true);
                     (view.getRootView()).findViewById(R.id.second_answer).setClickable(true);
                     (view.getRootView()).findViewById(R.id.third_answer).setClickable(true);
@@ -172,7 +174,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                     (view.getRootView()).findViewById(R.id.first_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
                     (view.getRootView()).findViewById(R.id.second_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
                     (view.getRootView()).findViewById(R.id.third_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
-                    this_question = questions.get(number);
+                    this_question = questionsForTest.questions.get(number);
                     ((TextView) (view.getRootView()).findViewById(R.id.number_of_question)).setText("Вопрос №" + (number + 1));
                     ((TextView) (view.getRootView()).findViewById(R.id.question)).setText(this_question.getQuestion());
                     answers.clear();
@@ -209,10 +211,10 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
             case R.id.skip:
                 number++;
                 number_of_skip_answers++;
-                if((number+1) == 5) {
+                if((number+1) == 40) {
                     ((Button)(view.getRootView().findViewById(R.id.next_question))).setText("Завершить тест");
                 }
-                if((number+1) == 6) {
+                if((number+1) == 41) {
                     ((MainActivity)getActivity()).loadFragment(new TestsFragment());
                     android.app.AlertDialog.Builder builder_end = new android.app.AlertDialog.Builder(getActivity());
                     LayoutInflater inflater_end = getActivity().getLayoutInflater();
@@ -231,7 +233,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
 
                     dialog_end.show();
                 } else {
-                    (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.INVISIBLE);
+                    (view.getRootView()).findViewById(R.id.next_question).setVisibility(View.GONE);
                     (view.getRootView()).findViewById(R.id.first_answer).setClickable(true);
                     (view.getRootView()).findViewById(R.id.second_answer).setClickable(true);
                     (view.getRootView()).findViewById(R.id.third_answer).setClickable(true);
@@ -240,7 +242,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                     (view.getRootView()).findViewById(R.id.first_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
                     (view.getRootView()).findViewById(R.id.second_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
                     (view.getRootView()).findViewById(R.id.third_answer).setBackground((Drawable) getResources().getDrawable(R.drawable.button_selector));
-                    this_question = questions.get(number);
+                    this_question = questionsForTest.questions.get(number);
                     ((TextView) (view.getRootView()).findViewById(R.id.number_of_question)).setText("Вопрос №" + (number + 1));
                     ((TextView) (view.getRootView()).findViewById(R.id.question)).setText(this_question.getQuestion());
                     answers.clear();

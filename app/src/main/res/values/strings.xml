@@ -18,4 +18,10 @@
     <string name="i_dont_know_what_happen">Я не знаю, что случилось, и не знаю, как оказать первую помощь</string>
     <string name="how_to_call_doctors">Как вызвать скорую помощь?</string>
     <string name="heart_ritm">Таймер для измерения пульса</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Назад</string>
+    <string name="exit">Выход</string>
+    <string name="metronom">Метроном для непрямого массажа сердца</string>
 </resources>

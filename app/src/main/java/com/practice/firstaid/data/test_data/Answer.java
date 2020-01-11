@@ -1,4 +1,4 @@
-package com.practice.firstaid.model;
+package com.practice.firstaid.data.test_data;
 
 public class Answer {
     private String answer;
