@@ -23,10 +23,12 @@ public class FirstAidFragment extends Fragment implements View.OnClickListener {
         Button how_to_call_doctors = (Button) view.findViewById(R.id.how_to_call_doctors);
         Button heart_ritm = (Button) view.findViewById(R.id.heart_ritm);
         Button ivl = (Button) view.findViewById(R.id.ivl);
+        Button dont_know_what_happen = (Button) view.findViewById(R.id.dont_know_what_happen);
 
         how_to_call_doctors.setOnClickListener(this);
         heart_ritm.setOnClickListener(this);
         ivl.setOnClickListener(this);
+        dont_know_what_happen.setOnClickListener(this);
 
         return view;
     }
@@ -42,6 +44,9 @@ public class FirstAidFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ivl:
                 ((MainActivity)getActivity()).loadFragment(new IVLFragment());
+                break;
+            case R.id.dont_know_what_happen:
+                ((MainActivity)getActivity()).loadFragment(new AlgorithmFragment());
                 break;
 
         }
