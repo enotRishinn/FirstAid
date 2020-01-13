@@ -13,36 +13,187 @@
             android:orientation="vertical"
             android:layout_margin="10dp">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ojoglegkiyalg"/>
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус ос, пчел или шерщня напоминает собой точку, вокруг которой образуется покраснение, нередко вздувается."
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukusos"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус клеща являет собой маленький красный круг, вокруг которого образуется белое кольцо, обрамленное красным. Чаще всего в середине укуса виднеется сам клещ."
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukusklescha"/>
+                </LinearLayout>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ojogtyageliyalg"/>
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус паука - это маленький, темно-красный кружок, вокруг которого образуются нечеткие красно-белые кольца, не вздувается."
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukuspauka"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус змеи - это два или один прокол, достаточно крупный в диаметре."
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukuszmei"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_margin="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус животного не сложно идентифицировать"
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukusgivotnogo"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_margin="10dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Укус медузы представляет собой обильные покраснения, вздутия, сыпь."
+                        android:layout_margin="20dp"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/black"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ukusmeduzi"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
             <Button
-                android:id="@+id/light_btn"
+                android:id="@+id/ukusos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_selector"
-                android:text="@string/light_btn"/>
+                android:text="Укус осы, пчелы или шешршня"/>
             <Button
-                android:id="@+id/tight_btn"
+                android:id="@+id/ukusklecsha"
                 android:layout_width="match_parent"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
-                android:text="@string/light_btn"/>
+                android:text="Укус клеща"/>
 
             <Button
-                android:id="@+id/burn_back"
+                android:id="@+id/ukuspauka"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_selector"
+                android:layout_height="wrap_content"
+                android:text="Укус паука"/>
+            <Button
+                android:id="@+id/ukuszmei"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_selector"
+                android:layout_height="wrap_content"
+                android:text="Укус змеи"/>
+
+            <Button
+                android:id="@+id/ukusanimal"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_selector"
+                android:layout_height="wrap_content"
+                android:text="Укус животного"/>
+            <Button
+                android:id="@+id/ukusmeduza"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_selector"
+                android:layout_height="wrap_content"
+                android:text="Укус медузы"/>
+
+            <Button
+                android:id="@+id/bite_back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_selector"
                 android:text="Назад"/>
             <Button
-                android:id="@+id/burn_exit"
+                android:id="@+id/bite_exit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_selector"

@@ -302,7 +302,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         // TODO: 13.01.2020 Разрыв связок (индекс 17)
                         break;
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
-                        // TODO: 13.01.2020 Фрагмент укусов
+                        ((MainActivity)getActivity()).loadFragment(new BiteFragment());
                         break;
                 }
                 break;
