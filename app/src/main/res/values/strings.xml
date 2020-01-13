@@ -24,4 +24,7 @@
     <string name="back">Назад</string>
     <string name="exit">Выход</string>
     <string name="metronom">Метроном для непрямого массажа сердца</string>
+    <string name="burn_light">Ожоги, относящиеся к легкой степени характеризуются покраснением поврежденного участка, отеком, болью и возможным образованием волдырей.</string>
+    <string name="burn_tight">Ожоги тяжелой степени характеризуются образование светло-, темно-коричневой или черной корочки.</string>
+    <string name="light_btn">Легкая степень</string>
 </resources>
