@@ -37,10 +37,10 @@ public class BurnFragment extends Fragment implements View.OnClickListener  {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.light_btn :
-                // TODO: 14.01.2020 Ожог легкой степени (индекс - 20)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(20));
                 break;
             case R.id.tight_btn :
-                // TODO: 14.01.2020 Ожог тяжелой степени (индекс - 21)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(21));
                 break;
             case R.id.burn_back :
                 ((MainActivity)getActivity()).loadFragment(new AlgorithmFragment());

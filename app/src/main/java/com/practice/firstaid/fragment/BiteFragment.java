@@ -45,22 +45,22 @@ public class BiteFragment extends Fragment implements View.OnClickListener  {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ukusos :
-                // TODO: 14.01.2020 Укус ос, пчел, шершня (индекс - 31)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(31));
                 break;
             case R.id.ukusklecsha :
-                // TODO: 14.01.2020 Укус клеща (индекс - 29)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(29));
                 break;
             case R.id.ukuspauka :
-                // TODO: 14.01.2020 Укус паука (индекс - 27)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(27));
                 break;
             case R.id.ukuszmei :
-                // TODO: 14.01.2020 Укус змеи (индекс - 26)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(26));
                 break;
             case R.id.ukusanimal :
-                // TODO: 14.01.2020 Укус животного (индекс - 30)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(30));
                 break;
             case R.id.ukusmeduza :
-                // TODO: 14.01.2020 Укус медузы (индекс - 28)
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(28));
                 break;
             case R.id.bite_back :
                 ((MainActivity)getActivity()).loadFragment(new AlgorithmFragment());

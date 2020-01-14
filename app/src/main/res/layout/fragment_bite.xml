@@ -7,155 +7,212 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="10dp">
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Укус ос, пчел или шерщня напоминает собой точку, вокруг которой образуется покраснение, нередко вздувается."
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukusos"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Укус клеща являет собой маленький красный круг, вокруг которого образуется белое кольцо, обрамленное красным. Чаще всего в середине укуса виднеется сам клещ."
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukusklescha"/>
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:text="Укусы"/>
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:layout_margin="10dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Укус паука - это маленький, темно-красный кружок, вокруг которого образуются нечеткие красно-белые кольца, не вздувается."
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukuspauka"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Укус змеи - это два или один прокол, достаточно крупный в диаметре."
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukuszmei"/>
-                </LinearLayout>
-            </LinearLayout>
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:weightSum="1"
-                android:layout_margin="10dp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_weight="0.5"
-                    android:layout_margin="10dp">
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukusos" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Укус животного не сложно идентифицировать"
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukusgivotnogo"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.5"
-                    android:orientation="vertical"
-                    android:layout_margin="10dp">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Укус медузы представляет собой обильные покраснения, вздутия, сыпь."
-                        android:layout_margin="20dp"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/ukusmeduzi"/>
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Движение помогает детям в больницах и детских домах, защищает права несовершеннолетних и поддерживает приёмные семьи. Команда следит за законодательством и постоянно вносит свои предложения, чтобы улучшить условия жизни детей в приютах и лечебницах.\n\nЧтобы узнать, как присоединиться к движению, звоните по номеру +7 (812) 600-71-38."/>
+
                 </LinearLayout>
 
-            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukusklescha" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Движение помогает детям в больницах и детских домах, защищает права несовершеннолетних и поддерживает приёмные семьи. Команда следит за законодательством и постоянно вносит свои предложения, чтобы улучшить условия жизни детей в приютах и лечебницах.\n\nЧтобы узнать, как присоединиться к движению, звоните по номеру +7 (812) 600-71-38."/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukuspauka" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Укус паука - это маленький, темно-красный кружок, вокруг которого образуются нечеткие красно-белые кольца, не вздувается."/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukuszmei" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Укус змеи - это два или один прокол, достаточно крупный в диаметре."/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukusgivotnogo" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Укус животного не сложно идентифицировать"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="200dp"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ukusmeduzi" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginBottom="20dp"
+                        android:text="Укус медузы представляет собой обильные покраснения, вздутия, сыпь"/>
+
+                </LinearLayout>
 
 
             <Button
                 android:id="@+id/ukusos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:text="Укус осы, пчелы или шешршня"/>
             <Button
                 android:id="@+id/ukusklecsha"
                 android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="Укус клеща"/>
@@ -163,12 +220,16 @@
             <Button
                 android:id="@+id/ukuspauka"
                 android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="Укус паука"/>
             <Button
                 android:id="@+id/ukuszmei"
                 android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="Укус змеи"/>
@@ -176,28 +237,42 @@
             <Button
                 android:id="@+id/ukusanimal"
                 android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="Укус животного"/>
             <Button
                 android:id="@+id/ukusmeduza"
                 android:layout_width="match_parent"
+                android:padding="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="Укус медузы"/>
 
-            <Button
-                android:id="@+id/bite_back"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_selector"
-                android:text="Назад"/>
-            <Button
-                android:id="@+id/bite_exit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_selector"
-                android:text="Выход"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <Button
+                        android:id="@+id/bite_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/exit"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_selector"/>
+
+                    <Button
+                        android:id="@+id/bite_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/back"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_selector"/>
+                </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

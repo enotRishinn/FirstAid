@@ -14,6 +14,20 @@
             android:layout_margin="10dp">
             <TextView
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"
+                android:text="Ожоги"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimaryDark"/>
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/burn_light"
                 android:layout_margin="20dp"
@@ -39,27 +53,41 @@
                 android:id="@+id/light_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/button_selector"
                 android:text="@string/light_btn"/>
             <Button
                 android:id="@+id/tight_btn"
                 android:layout_width="match_parent"
+                android:padding="10dp"
                 android:background="@drawable/button_selector"
                 android:layout_height="wrap_content"
                 android:text="@string/light_btn"/>
 
-            <Button
-                android:id="@+id/burn_back"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/button_selector"
-                android:text="Назад"/>
-            <Button
-                android:id="@+id/burn_exit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_selector"
-                android:text="Выход"/>
+                android:weightSum="2"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/burn_exit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/exit"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"/>
+
+                <Button
+                    android:id="@+id/burn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/back"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

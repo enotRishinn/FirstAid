@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.practice.firstaid.R;
+import com.practice.firstaid.activity.MainActivity;
 import com.practice.firstaid.data.aid_data.AidInstructions;
 
 public class ResultFragment extends Fragment implements View.OnClickListener{
@@ -56,21 +57,68 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
                 first_block.setVisibility(View.VISIBLE);
                 first_block.setText(aidInstructions.problems.get(id).firstBlock);
                 first_image.setVisibility(View.VISIBLE);
-                String url =  aidInstructions.problems.get(id).firstImgUrl;
-
+                if (aidInstructions.problems.get(id).firstImgUrl == "appendicit1") {
+                    first_image.setImageResource(R.drawable.appendicit1);
+                } else {
+                    first_image.setImageResource(R.drawable.sotrysenie1);
+                }
                 break;
             case 3 :
-                threeBlocks(id);
+                first_block.setVisibility(View.VISIBLE);
+                first_block.setText(aidInstructions.problems.get(id).firstBlock);
+                first_image.setVisibility(View.VISIBLE);
+                switch (aidInstructions.problems.get(id).firstImgUrl) {
+                    case "ushib1" :
+                        first_image.setImageResource(R.drawable.ushib1);
+                        break;
+                    case "ojoglegkiy1" :
+                        first_image.setImageResource(R.drawable.ojoglegkiy1);
+                        break;
+                }
+                second_block.setVisibility(View.VISIBLE);
+                second_block.setText(aidInstructions.problems.get(id).secondBlock);
                 break;
             case 5 :
-                fiveBlocks(id);
+                first_block.setVisibility(View.VISIBLE);
+                first_block.setText(aidInstructions.problems.get(id).firstBlock);
+                first_image.setVisibility(View.VISIBLE);
+                second_block.setVisibility(View.VISIBLE);
+                second_block.setText(aidInstructions.problems.get(id).secondBlock);
+                second_image.setVisibility(View.VISIBLE);
+                third_block.setVisibility(View.VISIBLE);
+                third_block.setText(aidInstructions.problems.get(id).thirdBlock);
+                switch (aidInstructions.problems.get(id).firstImgUrl) {
+                    case "sdavlivanie1" :
+                        first_image.setImageResource(R.drawable.sdavlivanie1);
+                        second_image.setImageResource(R.drawable.sdavlivanie2);
+                        break;
+                    case "rana1" :
+                        first_image.setImageResource(R.drawable.rana1);
+                        second_image.setImageResource(R.drawable.rana2);
+                        break;
+                    case "vivih1" :
+                        first_image.setImageResource(R.drawable.vivih1);
+                        second_image.setImageResource(R.drawable.vivih2);
+                        break;
+                }
                 break;
             case 7 :
-                sevenBlocks(id);
+                first_block.setVisibility(View.VISIBLE);
+                first_block.setText(aidInstructions.problems.get(id).firstBlock);
+                first_image.setVisibility(View.VISIBLE);
+                first_image.setImageResource(R.drawable.vivih1);
+                second_block.setVisibility(View.VISIBLE);
+                second_block.setText(aidInstructions.problems.get(id).secondBlock);
+                second_image.setVisibility(View.VISIBLE);
+                second_image.setImageResource(R.drawable.perelom2);
+                third_block.setVisibility(View.VISIBLE);
+                third_block.setText(aidInstructions.problems.get(id).thirdBlock);
+                third_image.setVisibility(View.VISIBLE);
+                third_image.setImageResource(R.drawable.vivih2);
+                fourth_block.setVisibility(View.VISIBLE);
+                fourth_block.setText(aidInstructions.problems.get(id).fourthBlock);
                 break;
         }
-
-
 
         return view;
     }
@@ -78,6 +126,14 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.result_back :
+                ((MainActivity)getActivity()).loadFragment(new IVLFragment());
+                break;
+            case R.id.result_exit :
+                ((MainActivity)getActivity()).loadFragment(new FirstAidFragment());
+                break;
+        }
 
     }
 }

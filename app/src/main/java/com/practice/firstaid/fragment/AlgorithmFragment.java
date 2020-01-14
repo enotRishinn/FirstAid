@@ -384,6 +384,9 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         break;
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
                         algorithm_question.setText("Человек находится в сознании?");
+                        third_action.setVisibility(View.GONE);
+                        fourth_action.setVisibility(View.GONE);
+                        fifth_action.setVisibility(View.GONE);
                         first_action.setText("Да");
                         second_action.setText("Нет");
                         break;
