@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.practice.firstaid.R;
+import com.practice.firstaid.activity.MainActivity;
 import com.practice.firstaid.data.aid_data.AidInstructions;
 import com.practice.firstaid.data.aid_data.Problem;
 
@@ -32,13 +33,18 @@ public class ManualFragment extends Fragment implements View.OnClickListener {
         final LinearLayout manual_list = (LinearLayout) view.findViewById(R.id.manual_list);
         EditText search = (EditText) view.findViewById(R.id.search);
 
+        int counter = 0;
         for (Problem i : aidInstructions.problems) {
+
         //    if (i.decription.indexOf(search.toString()) > 0 || i.firstBlock.indexOf(search.toString()) > 0 || i.secondBlock.indexOf(search.toString()) > 0 || i.thirdBlock.indexOf(search.toString()) > 0 || i.fourthBlock.indexOf(search.toString()) > 0 || i.symptoms.indexOf(search.toString()) > 0) {
                 final View v = getLayoutInflater().inflate(R.layout.temp_layout, null);
                 Button name = (Button) v.findViewById(R.id.name);
                 name.setText(i.name);
+                name.setOnClickListener(this);
+                v.setId(counter);
                 manual_list.addView(v);
           //  }
+            counter++;
         }
 
         return view;
@@ -46,8 +52,14 @@ public class ManualFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        Button name = (Button) view.getRootView().findViewById(R.id.name);
+        int counter = 0;
+System.out.println(name.getText().toString());
         for (Problem i : aidInstructions.problems) {
-            if (i.name == R.id.name;)
+            if (i.name == name.getText().toString()) {
+                ((MainActivity)getActivity()).loadFragment(new ResultFragment(counter));
+            }
+            counter++;
         }
     }
 }
