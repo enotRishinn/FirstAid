@@ -188,11 +188,11 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                 switch (algorithm_question.getText().toString()) {
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
                         algorithm_question.setText("Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)");
-                        first_action.setText("Ушиб /n Гематома, небольшой отек, боль при касании");
-                        second_action.setText("Сдавливание /n Длительное нахождение конечности под тяжелым предметом");
-                        third_action.setText("Разрыв/растяжение связок /n Боль при движении, отек, покраснение, нарушение функционирования");
-                        fourth_action.setText("Вывих /n Резкая сильная боль, сустав теряет подвижность, нарушается внешний вид, отек");
-                        fifth_action.setText("Перелом /n Сильная боль, нарастающий отек, невозможность двигать, нарушение внешнего вида, покраснение, невозможность функционирования");
+                        first_action.setText("Ушиб \n Гематома, небольшой отек, боль при касании");
+                        second_action.setText("Сдавливание \n Длительное нахождение конечности под тяжелым предметом");
+                        third_action.setText("Разрыв/растяжение связок \n Боль при движении, отек, покраснение, нарушение функционирования");
+                        fourth_action.setText("Вывих \n Резкая сильная боль, сустав теряет подвижность, нарушается внешний вид, отек");
+                        fifth_action.setText("Перелом \n Сильная боль, нарастающий отек, невозможность двигать, нарушение внешнего вида, покраснение, невозможность функционирования");
                         break;
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
                         ((MainActivity)getActivity()).loadFragment(new ResultFragment(16));
@@ -294,7 +294,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         ((MainActivity)getActivity()).loadFragment(new ResultFragment(11));
                         break;
                     case "Человек находится в сознании?" :
-                        // TODO: 13.01.2020 Без сознания 
+                        ((MainActivity)getActivity()).loadFragment(new IVLFragment());
                         break;
                 }
                 break;

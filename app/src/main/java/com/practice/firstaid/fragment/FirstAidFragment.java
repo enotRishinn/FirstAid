@@ -53,6 +53,7 @@ public class FirstAidFragment extends Fragment implements View.OnClickListener {
                 ((MainActivity)getActivity()).loadFragment(new AlgorithmFragment());
                 break;
             case R.id.know_what_happen:
+                ((MainActivity)getActivity()).loadFragment(new ShortManualFragment());
                 break;
             case R.id.volunteer_button:
                 ((MainActivity)getActivity()).loadFragment(new VolunteeringFragment());

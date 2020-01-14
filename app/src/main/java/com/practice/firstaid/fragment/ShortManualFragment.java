@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,7 +18,7 @@ import com.practice.firstaid.data.aid_data.Problem;
 
 import java.util.ArrayList;
 
-public class ManualFragment extends Fragment implements View.OnClickListener {
+public class ShortManualFragment extends Fragment implements View.OnClickListener {
     ArrayList<View> manualList = new ArrayList<>();
     AidInstructions aidInstructions = new AidInstructions();
     int counter = 0;
@@ -38,18 +37,18 @@ public class ManualFragment extends Fragment implements View.OnClickListener {
         for (Problem i : aidInstructions.problems) {
 
             final int temp = counter;
-        //    if (i.decription.indexOf(search.toString()) > 0 || i.firstBlock.indexOf(search.toString()) > 0 || i.secondBlock.indexOf(search.toString()) > 0 || i.thirdBlock.indexOf(search.toString()) > 0 || i.fourthBlock.indexOf(search.toString()) > 0 || i.symptoms.indexOf(search.toString()) > 0) {
-                final View v = getLayoutInflater().inflate(R.layout.temp_layout, null);
-                Button name = (Button) v.findViewById(R.id.name);
-                name.setText(i.name);
-                name.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(temp));
-                    }
-                });
-                manual_list.addView(v);
-          //  }
+            //    if (i.decription.indexOf(search.toString()) > 0 || i.firstBlock.indexOf(search.toString()) > 0 || i.secondBlock.indexOf(search.toString()) > 0 || i.thirdBlock.indexOf(search.toString()) > 0 || i.fourthBlock.indexOf(search.toString()) > 0 || i.symptoms.indexOf(search.toString()) > 0) {
+            final View v = getLayoutInflater().inflate(R.layout.temp_layout, null);
+            Button name = (Button) v.findViewById(R.id.name);
+            name.setText(i.name);
+            name.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ((MainActivity)getActivity()).loadFragment(new ResultFragment(temp));
+                }
+            });
+            manual_list.addView(v);
+            //  }
             counter++;
         }
 

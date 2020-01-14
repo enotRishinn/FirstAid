@@ -68,11 +68,11 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
                 first_block.setText(aidInstructions.problems.get(id).firstBlock);
                 first_image.setVisibility(View.VISIBLE);
                 switch (aidInstructions.problems.get(id).firstImgUrl) {
-                    case "ushib1" :
+                    case "ushib1.jpg" :
                         first_image.setImageResource(R.drawable.ushib1);
                         break;
-                    case "ojoglegkiy1" :
-                        first_image.setImageResource(R.drawable.ojoglegkiy1);
+                    case "ojoglegkiy1.jpg" :
+                        first_image.setImageResource(R.drawable.o);
                         break;
                 }
                 second_block.setVisibility(View.VISIBLE);
@@ -88,15 +88,15 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
                 third_block.setVisibility(View.VISIBLE);
                 third_block.setText(aidInstructions.problems.get(id).thirdBlock);
                 switch (aidInstructions.problems.get(id).firstImgUrl) {
-                    case "sdavlivanie1" :
+                    case "sdavlivanie1.jpg" :
                         first_image.setImageResource(R.drawable.sdavlivanie1);
                         second_image.setImageResource(R.drawable.sdavlivanie2);
                         break;
-                    case "rana1" :
+                    case "rana1.jpg" :
                         first_image.setImageResource(R.drawable.rana1);
                         second_image.setImageResource(R.drawable.rana2);
                         break;
-                    case "vivih1" :
+                    case "vivih1.jpg" :
                         first_image.setImageResource(R.drawable.vivih1);
                         second_image.setImageResource(R.drawable.vivih2);
                         break;
