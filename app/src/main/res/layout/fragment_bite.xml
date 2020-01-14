@@ -27,6 +27,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
                 android:background="@color/colorPrimaryDark"/>
 
                 <LinearLayout
@@ -53,7 +54,7 @@
                         android:textSize="14sp"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="20dp"
-                        android:text="Движение помогает детям в больницах и детских домах, защищает права несовершеннолетних и поддерживает приёмные семьи. Команда следит за законодательством и постоянно вносит свои предложения, чтобы улучшить условия жизни детей в приютах и лечебницах.\n\nЧтобы узнать, как присоединиться к движению, звоните по номеру +7 (812) 600-71-38."/>
+                        android:text="Укус ос, пчел или шерщня напоминает собой точку, вокруг которой образуется покраснение, нередко вздувается."/>
 
                 </LinearLayout>
 
@@ -82,7 +83,7 @@
                         android:textSize="14sp"
                         android:textColor="@android:color/black"
                         android:layout_marginBottom="20dp"
-                        android:text="Движение помогает детям в больницах и детских домах, защищает права несовершеннолетних и поддерживает приёмные семьи. Команда следит за законодательством и постоянно вносит свои предложения, чтобы улучшить условия жизни детей в приютах и лечебницах.\n\nЧтобы узнать, как присоединиться к движению, звоните по номеру +7 (812) 600-71-38."/>
+                        android:text="Укус клеща являет собой маленький красный круг, вокруг которого образуется белое кольцо, обрамленное красным. Чаще всего в середине укуса виднеется сам клещ."/>
 
                 </LinearLayout>
 
@@ -261,7 +262,7 @@
                         android:id="@+id/bite_exit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/exit"
+                        android:text="Выход"
                         android:layout_weight="1"
                         android:background="@drawable/button_selector"/>
 
@@ -269,7 +270,7 @@
                         android:id="@+id/bite_back"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/back"
+                        android:text="Назад"
                         android:layout_weight="1"
                         android:background="@drawable/button_selector"/>
                 </LinearLayout>
