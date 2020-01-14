@@ -46,6 +46,8 @@ public class ManualFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-
+        for (Problem i : aidInstructions.problems) {
+            if (i.name == R.id.name;)
+        }
     }
 }
