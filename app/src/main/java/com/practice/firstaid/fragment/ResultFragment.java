@@ -18,6 +18,11 @@ import com.practice.firstaid.data.aid_data.AidInstructions;
 
 public class ResultFragment extends Fragment implements View.OnClickListener{
     final AidInstructions aidInstructions = new AidInstructions();
+    Integer id;
+
+    ResultFragment(Integer id) {
+        this.id = id;
+    }
 
     @Nullable
     @Override
@@ -32,15 +37,40 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
         TextView third_block = (TextView)view.findViewById(R.id.third_block);
         ImageView third_image = (ImageView)view.findViewById(R.id.third_image);
         TextView fourth_block = (TextView)view.findViewById(R.id.fourth_block);
-        Button back_button = (Button)view.findViewById(R.id.back);
-        Button exit_button = (Button)view.findViewById(R.id.exit);
+
+
+        Button back_button = (Button)view.findViewById(R.id.result_back);
+        Button exit_button = (Button)view.findViewById(R.id.result_exit);
 
         back_button.setOnClickListener(this);
         exit_button.setOnClickListener(this);
 
+        result_name.setText(aidInstructions.problems.get(id).name);
 
+        switch (aidInstructions.problems.get(id).blocks) {
+            case 1 :
+                oneBlock(id);
+            case 2 :
+                twoBlocks(id);
+        }
 
-        return super.onCreateView(inflater, container, savedInstanceState);
+        return view;
+    }
+
+    public void oneBlock(Integer id) {
+
+    }
+
+    public void twoBlocks(Integer id) {
+    }
+
+    public void threeBlocks(Integer id) {
+    }
+
+    public void fiveBlocks(Integer id) {
+    }
+
+    public void sevenBlocks(Integer id) {
     }
 
     @Override

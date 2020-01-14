@@ -21,12 +21,14 @@ import com.practice.firstaid.activity.MainActivity;
 public class AlgorithmFragment extends Fragment implements View.OnClickListener {
     private boolean flag2 = false;
     private boolean flag = false;
-
+    Integer id;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_algorithm, null);
+
+
 
         TextView algorithm_question = (TextView) view.findViewById(R.id.algorithm_question);
         Button first_action = (Button) view.findViewById(R.id.first_action);
@@ -84,7 +86,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         ((MainActivity)getActivity()).loadFragment(new BurnFragment());
                         break;
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
-                        // TODO: 13.01.2020 Ушиб (индекс 15)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(15));
                         break;
                     case "Учащено ли дыхание у пострадавшего?" :
                         algorithm_question.setText("Повышена ли температура тела у пострадавшего? (Приложите в идеале свой лоб/губы ко лбу пострадавшего, или хотя бы запястье, сравните со своей температурой)");
@@ -102,10 +104,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Кожа пострадавшего горячая и сухая? (нет пота)" :
-                        // TODO: 13.01.2020 Тепловой удар (тяжелая форма) - индексация 8
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(8));
                         break;
                     case "Присутствует ли сильная боль сконцентрированная зонально в нижней правой части живота? (При пальпации и движениях обостряется именно в этой зоне)" :
-                        // TODO: 13.01.2020 Аппендицит (индекс - 12)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(12));
                         break;
                     case "Нащупайте пульс пострадавшего (легче всего на шее или запястье). Включите таймер и посчитайте количество ударов." :
                         flag2 = false;
@@ -119,13 +121,13 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли тошнота? Рвота?" :
-                        // TODO: 13.01.2020 Отравление угарным или бытовым газом (индекс - 25)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(25));
                         break;
                     case "Помутнено ли сознание пострадавшего? (Не до конца осознает и воспринимает действительность, отвечает не в попад, у него ярко выраженный бред, не может ответить адекватно на простые вопросы, делает нелогичные действия)" :
-                        // TODO: 13.01.2020 Диабетическая кома (индекс - 4)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(4));
                         break;
                     case "Присутствует ли обильная потливость? (Стекающий пот, мокрая одежда от пота, выступившие капли пота или просто влажная кожа)" :
-                        // TODO: 13.01.2020 Отравление ядовитыми химикатами и веществами (индекс - 24)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(24));
                         break;
                     case "Речь пострадавшего несвязная? Язык заплетается?" :
                         algorithm_question.setText("Присутствует ли резкая головная боль?");
@@ -138,10 +140,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли ассиметрия в лице? (При улыбке, попытках говорить и прочее) При движениях? (Если пострадавший пытается поднять обе руки, они оказываются на разной высоте)" :
-                        // TODO: 13.01.2020 Инсульт (индекс - 1)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(1));
                         break;
                     case "Нарушена ли общая координация в движениях?" :
-                        // TODO: 13.01.2020 Переохлаждение (индекс - 10)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(10));
                         break;
                     case "Присутствует ли судороги, конвульсии, дрожь?" :
                         algorithm_question.setText("Присутствует ли боль в животе?");
@@ -149,7 +151,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли боль в животе?" :
-                        // TODO: 13.01.2020 Отравление ядовитыми химикатами и веществами (индекс - 24)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(24));
                         break;
                     case "Затруднено ли дыхание?" :
                         algorithm_question.setText("Повышено ли слюноотделение?");
@@ -157,10 +159,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Повышено ли слюноотделение?" :
-                        // TODO: 13.01.2020 Эпилепсия (индекс - 2)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(2));
                         break;
                     case "Кожа бледная и влажная?" :
-                        // TODO: 13.01.2020 Инфаркт (индекс - 0)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(0));
                         break;
                     case "Испытывает ли пострадавший затруднение в дыхании?" :
                         algorithm_question.setText("Присутствует ли тошнота? Рвота?");
@@ -168,7 +170,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Испытывает ли пострадавший головную боль?" :
-                        // TODO: 13.01.2020 Солнечный удар (индекс - 9)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(9));
                         break;
                     case "Нащупайте пульс пострадавшего (легче всего на шее или запястье). Используйте встроенный таймер и посчитайте количество ударов." :
                         flag2 = false;
@@ -177,7 +179,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Учащено ли дыхание о пострадавшего, есть ли одышка?" :
-                        // TODO: 13.01.2020 Обезвоживание (индекс - 13)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(13));
                         break;
                 }
 
@@ -193,10 +195,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         fifth_action.setText("Перелом /n Сильная боль, нарастающий отек, невозможность двигать, нарушение внешнего вида, покраснение, невозможность функционирования");
                         break;
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
-                        // TODO: 13.01.2020 Сдавливание (индекс 16)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(16));
                         break;
                     case "Кожа пострадавшего горячая и сухая? (нет пота)" :
-                        // TODO: 13.01.2020 Тепловой удар (средняя форма) - индексация 7
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(7));
                         break;
                     case "Нащупайте пульс пострадавшего (легче всего на шее или запястье). Присутствует ли аритмия? (Неравномерное, периодически ускоряющееся, замедляющееся сердцебиение)":
                         algorithm_question.setText("Присутствует ли сильная боль сконцентрированная зонально в нижней правой части живота? (При пальпации и движениях обостряется именно в этой зоне)");
@@ -204,7 +206,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли сильная боль сконцентрированная зонально в нижней правой части живота? (При пальпации и движениях обостряется именно в этой зоне)" :
-                        // TODO: 13.01.2020 Внутреннее кровотечение (индекс - 14)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(14));
                         break;
                     case "Повышена ли температура тела у пострадавшего? (Приложите в идеале свой лоб/губы ко лбу пострадавшего, или хотя бы запястье, сравните со своей температурой)" :
                         flag = true;
@@ -214,10 +216,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Меньше 15 ударов");
                         break;
                     case "Присутствует ли тошнота? Рвота?" :
-                        // TODO: 13.01.2020 Приступ астмы (индекс - 6)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(6));
                         break;
                     case "Затруднено ли дыхание пострадавшего?" :
-                        // TODO: 13.01.2020 Инфаркт (индекс - 0)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(0));
                         break;
                     case "Нащупайте пульс пострадавшего (легче всего на шее или запястье). Включите таймер и посчитайте количество ударов." :
                         algorithm_question.setText("Помутнено ли сознание пострадавшего? (Не доконца осознает и воспринимает действительность, отвечает не в попад, у него ярко выраженный бред, не может ответить адекватно на простые вопросы, делает нелогичные действия)");
@@ -230,7 +232,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли обильная потливость? (Стекающий пот, мокрая одежда от пота, выступившие капли пота или просто влажная кожа)" :
-                        // TODO: 13.01.2020 Обезвоживание (индекс - 13)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(13));
                         break;
                     case "Учащено ли дыхание у пострадавшего?" :
                         algorithm_question.setText("Речь пострадавшего несвязная? Язык заплетается?");
@@ -238,7 +240,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Присутствует ли ассиметрия в лице? (При улыбке, попытках говорить и прочее) При движениях? (Если пострадавший пытается поднять обе руки, они оказываются на разной высоте)" :
-                        // TODO: 13.01.2020 Сотрясение мозга (индекс - 5)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(5));
                         break;
                     case "Присутствует ли резкая головная боль?" :
                         algorithm_question.setText("Нарушена ли общая координация в движениях?");
@@ -246,7 +248,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Нарушена ли общая координация в движениях?" :
-                        // TODO: 13.01.2020 Обморожение (индекс - 11)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(11));
                         break;
                     case "Речь пострадавшего несвязная? Язык заплетается?" :
                         algorithm_question.setText("Присутствует ли судороги, конвульсии, дрожь?");
@@ -259,10 +261,10 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Затруднено ли дыхание?" :
-                        // TODO: 13.01.2020 Инсулиновый шок (индекс - 3)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(3));
                         break;
                     case "Повышено ли слюноотделение?" :
-                        // TODO: 13.01.2020 Переохлаждение (индекс - 10)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(10));
                         break;
                     case "Присутствует ли судороги, конвульсии, дрожь?" :
                         algorithm_question.setText("Кожа бледная и влажная?");
@@ -281,7 +283,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Испытывает ли пострадавший головную боль?" :
-                        // TODO: 13.01.2020 Пищевое отравление (индекс - 23)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(23));
                         break;
                     case "Нащупайте пульс пострадавшего (легче всего на шее или запястье). Используйте встроенный таймер и посчитайте количество ударов." :
                         algorithm_question.setText("Учащено ли дыхание о пострадавшего, есть ли одышка?");
@@ -289,7 +291,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
                         second_action.setText("Нет");
                         break;
                     case "Учащено ли дыхание о пострадавшего, есть ли одышка?" :
-                        // TODO: 13.01.2020 Обморожение (индекс - 11)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(11));
                         break;
                     case "Человек находится в сознании?" :
                         // TODO: 13.01.2020 Без сознания 
@@ -299,7 +301,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
             case R.id.third_action:
                 switch (algorithm_question.getText().toString()) {
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
-                        // TODO: 13.01.2020 Разрыв связок (индекс 17)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(17));
                         break;
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
                         ((MainActivity)getActivity()).loadFragment(new BiteFragment());
@@ -309,7 +311,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
             case R.id.fourth_action:
                 switch (algorithm_question.getText().toString()) {
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
-                        // TODO: 13.01.2020 Вывих (индекс 18)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(18));
                         break;
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
                         algorithm_question.setText("Учащено ли дыхание у пострадавшего?");
@@ -324,7 +326,7 @@ public class AlgorithmFragment extends Fragment implements View.OnClickListener 
             case R.id.fifth_action:
                 switch (algorithm_question.getText().toString()) {
                     case "Определите по симптомам тяжесть травмы (если вы не уверены, лучше выбрать более тяжелый случай)" :
-                        // TODO: 13.01.2020 Перелом (индекс 19)
+                        ((MainActivity)getActivity()).loadFragment(new ResultFragment(19));
                         break;
                     case "Есть ли явные изменения в цвете или целостности кожных покровов?" :
                         third_action.setVisibility(View.GONE);

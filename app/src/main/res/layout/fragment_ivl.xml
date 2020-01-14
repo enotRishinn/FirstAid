@@ -15,6 +15,253 @@
             android:orientation="vertical"
             android:layout_margin="10dp">
 
+
+            <Button
+                android:id="@+id/slr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                android:text="Развернуть справку по сердечно-легочной реанимации"
+                android:layout_weight="1"
+                android:background="@drawable/button_selector"/>
+
+        <LinearLayout
+            android:id="@+id/slr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone"
+                android:text="Основные понятия"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="20dp"
+                android:text="Сердечно-легочная реанимация (СЛР) - это комплекс неотложных мероприятий, которые выполняются для выведения из клинической смерти (для оживления человека).\n\nКлиническая смерть - это обратимое состояние, при котором происходит полная остановка дыхания и кровообращения. Обратимость этого состояния колеблется от 3 до 7 минут (именно столько времени может прожить наш мозг без кислорода). Все зависит от температуры окружающей среды (в холоде выживаемость увеличивается) и исходного состояния пациента.\n\nВажно, чтобы реанимационные мероприятия были начаты сразу, после диагностики клинической смерти. Иначе кора головной мозг погибнет и тогда, даже если получится возобновить сердечную деятельность, человека, как личность, мы потеряем."/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:text="Признаки клинической смерти"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:text="Стать реаниматором может любой дееспособный человек, столкнувшийся с клинической смертью. К признакам клинической смерти относятся:\n\n1. Потеря сознания и полное расслабление человека (нет тонуса мышц, не вызываются рефлексы);\n\n2. Широкие зрачки, которые не реагируют на свет (если посветить фонариком в глаз живому человеку, зрачок моментально сузится, чего не будет при клинической смерти человека);\n\n3. Кожные покровы приобретут землистый оттенок (пепельно-серый цвет), или же будут бледными с синюшным оттенком;\n\n4. Отсутствие пульса на сонных артериях. Для этого необходимо прощупать пульс с двух сторон шеи. Вначале необходимо найти пальцами щитовидный хрящ (у мужчин кадык), а затем продвинуть пальцы на пару см. в сторону;"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ivl1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="5. Остановка дыхания (не будет подниматься грудная клетка, не будет слышан выдох)."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/colorPrimaryDark"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginBottom="20dp"
+                android:text="Этапы сердечно - легочной реанимации"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:text="Если вы увидели данные признаки, то должны немедленно приступить к реанимации.\n\n1. Необходимо уложить пострадавшего на ровную горизонтальную поверхность;\n\n2. По возможности нужно поднять ноги умирающему (положить их на стул или другой доступный предмет);"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ivl2"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="3.Освободить грудную клетку от одежды, расстегнуть ремень и другие, стягивающие грудной и брюшной отдел, элементы одежды;\n\n4. Необходимо определить область, где будет проводиться непрямой массаж сердца."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ivl3"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="На картинке изображено местоположение мечевидного отростка. Давить на грудную клетку нужно на 3-5 см. выше мечевидного отростка и строго по средней линии (т.е. на грудину). У мужчин эту область можно определить, проведя линию по соскам. Там где эта линия пересечет грудину и будет нужная точка."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/ivl4"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Ладонь одной руки необходимо положить на тыл другой руки (создать замок) и выпрямить руки в локтях;"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ivl5"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/ivl6"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ivl7"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Слева – область нижней руки, которая должна давить на грудную клетку. Справа - область груди, куда необходимо давить при СЛР.\n\n 5. Непосредственный массаж сердца. Не сгибая руки в локтях, надавливают на грудину в установленном месте с такой силой, чтобы она прогнулась на 5-6 см. (это довольно хорошо ощущается), после чего дают возможность грудине полностью расправиться (т.е. вернуться в изначальное положение). Давим мы не руками, а всем туловищем."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:src="@drawable/ivl8"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Толчки должны быть ритмичные и достаточно резкие. Причем для эффективного массажа частота нажатий на грудную клетку должна быть не меньше 100 в минуту (стремиться необходимо к 120). Т.е. за секунду вы должны сделать 1.5-2 нажатия. Сразу таких нажатий должно быть 30.\n\n6. После 30 нажатий необходимо перейти к искусственной вентиляции легких (вдуванию воздуха из своего рта в рот или нос потерпевшему). Для этого необходимо запрокинуть голову человеку. Одной рукой вы беретесь за лоб, другую кладете под шею и разгибаете голову. Но здесь будьте осторожны."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ivl9"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Если у человека имеется перелом шейного отдела позвоночника, вы только усугубите ситуацию (настороженность на счет наличия перелома должна быть, если этот человек упал с высоты на верхнюю часть туловища; ударился головой о дно при нырянии; попал в ДТП). Если вы подозреваете прелом, то запрокидывать голову нельзя. Переходите к следующему этапу;\n\nВыдвинуть нижнюю челюсть вперед (т.е. вверх по отношению к лежащему человеку). Пальцы рук кладутся на углы нижней челюсти и надавливают на них так, чтобы выдвинуть челюсть (нижние зубы должны стать впереди верхних, т.е. выше верхних по отношению к лежащему человеку);"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ivl10"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Открыть рот пострадавшему. Если во рту вы обнаружите рвотные массы, или другие инородные предметы, необходимо их оттуда извлечь. Поверните голову на бок и любым куском материи очистите ротовую полость. После этого повторите предыдущие пункты 6 этапа и откройте рот пострадавшему.\n\nПосле необходимо перейти к непосредственному вдуванию воздуха. Чтобы защитить себя, вдувайте воздух через ткань (платок или салфетку). Чтобы весь ваш воздух попал в дыхательные пути пострадавшего, вы должны плотно прижать свои губы к его рту (откройте свой рот широко, охватите его губы, чтобы его рот, оказался в вашем) и зажать ему нос."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/ivl11"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Перед этим вдохните воздух в свои легкие, но не очень глубоко. Выдох должен быть резким. Не стоит выдыхать весь свой воздух из легких (выдох должен включать около 80 % вашего воздуха в легких). Таких выдохов необходимо сделать два. После чего опять приступить к массажу сердца."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/ivl12"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="7. Таким образом, вы осуществляете циклы сердечно-легочной реанимации, состоящие из 30 нажатий на грудную клетку и 2 вдохов изо рта в рот. (30:2). После 3-5 таких циклов необходимо заново оценить пульс и дыхание пострадавшего. Если вы почувствуете биение сонной артерии, увидите самостоятельные вдохи человека, безусловно, реанимацию стоит прекратить. Если же сердечная деятельность не возобновилась, продолжайте сердечно-легочную реанимацию, пока к вам не прибудет помощь."
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

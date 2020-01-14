@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ public class IVLFragment extends Fragment implements View.OnClickListener {
 
     private boolean queenHasStarted = false;
     private boolean beeHasStarted = false;
+    private boolean slrHas = false;
     private MediaPlayer media_bee;
     private MediaPlayer media_queen;
     private SeekBar seekBar_bee;
@@ -36,12 +38,18 @@ public class IVLFragment extends Fragment implements View.OnClickListener {
 
         ImageButton play_bee = (ImageButton) view.findViewById(R.id.play_bee);
         ImageButton play_queen = (ImageButton) view.findViewById(R.id.play_queen);
+        Button slr = (Button) view.findViewById(R.id.slr);
         media_bee = MediaPlayer.create(getActivity(), R.raw.bee);
         media_queen = MediaPlayer.create(getActivity(), R.raw.queen);
         seekBar_bee = (SeekBar) view.findViewById(R.id.seekBar_bee);
         seekBar_queen = (SeekBar) view.findViewById(R.id.seekBar_queen);
 
+        ((LinearLayout)(view.findViewById(R.id.slr_layout))).setVisibility(View.GONE);
+        slrHas = false;
+        ((Button)(view.findViewById(R.id.slr))).setText("Развернуть справку по сердечно-легочной реанимации");
+
         play_bee.setOnClickListener(this);
+        slr.setOnClickListener(this);
         play_queen.setOnClickListener(this);
 
         seekBar_bee.setMax(media_bee.getDuration());
@@ -138,6 +146,16 @@ public class IVLFragment extends Fragment implements View.OnClickListener {
                     queenHasStarted = false;
                 }
                 break;
+            case R.id.slr:
+                if (!slrHas) {
+                    ((LinearLayout)(view.getRootView().findViewById(R.id.slr_layout))).setVisibility(View.VISIBLE);
+                    slrHas = true;
+                    ((Button)(view.getRootView().findViewById(R.id.slr))).setText("Свернуть справку по сердечно-легочной реанимации");
+                } else {
+                    ((LinearLayout)(view.getRootView().findViewById(R.id.slr_layout))).setVisibility(View.GONE);
+                    slrHas = false;
+                    ((Button)(view.getRootView().findViewById(R.id.slr))).setText("Развернуть справку по сердечно-легочной реанимации");
+                }
 
         }
     }

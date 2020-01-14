@@ -2,17 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_margin="10dp">
-
             <TextView
                 android:id="@+id/result_name"
                 android:layout_width="match_parent"
@@ -22,66 +19,56 @@
                 android:id="@+id/first_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"/>
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/first_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:visibility="invisible"/>
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/second_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"/>
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/second_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:visibility="invisible"/>
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/third_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"/>
+                android:visibility="gone"/>
 
             <ImageView
                 android:id="@+id/third_image"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:visibility="invisible"/>
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
 
             <TextView
                 android:id="@+id/fourth_block"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"/>
+                android:visibility="gone"/>
 
-            <LinearLayout
+            <Button
+                android:id="@+id/result_back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:layout_marginTop="20dp">
-                <Button
-                    android:id="@+id/back"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/back"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_selector"/>
-
-                <Button
-                    android:id="@+id/exit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/exit"
-                    android:layout_weight="1"
-                    android:background="@drawable/button_selector"/>
-
-            </LinearLayout>
+                android:text="Сердечно-легочная реанимация"
+                android:background="@drawable/button_selector"/>
+            <Button
+                android:id="@+id/result_exit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Выход"
+                android:background="@drawable/button_selector"/>
         </LinearLayout>
 
     </ScrollView>
