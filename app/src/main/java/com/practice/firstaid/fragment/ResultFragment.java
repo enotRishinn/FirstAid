@@ -49,29 +49,32 @@ public class ResultFragment extends Fragment implements View.OnClickListener{
 
         switch (aidInstructions.problems.get(id).blocks) {
             case 1 :
-                oneBlock(id);
+                first_block.setVisibility(View.VISIBLE);
+                first_block.setText(aidInstructions.problems.get(id).firstBlock);
+                break;
             case 2 :
-                twoBlocks(id);
+                first_block.setVisibility(View.VISIBLE);
+                first_block.setText(aidInstructions.problems.get(id).firstBlock);
+                first_image.setVisibility(View.VISIBLE);
+                String url =  aidInstructions.problems.get(id).firstImgUrl;
+
+                break;
+            case 3 :
+                threeBlocks(id);
+                break;
+            case 5 :
+                fiveBlocks(id);
+                break;
+            case 7 :
+                sevenBlocks(id);
+                break;
         }
+
+
 
         return view;
     }
 
-    public void oneBlock(Integer id) {
-
-    }
-
-    public void twoBlocks(Integer id) {
-    }
-
-    public void threeBlocks(Integer id) {
-    }
-
-    public void fiveBlocks(Integer id) {
-    }
-
-    public void sevenBlocks(Integer id) {
-    }
 
     @Override
     public void onClick(View view) {
